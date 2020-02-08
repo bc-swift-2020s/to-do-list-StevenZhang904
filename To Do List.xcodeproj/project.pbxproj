@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		77CAD84B23ECC02200B6C220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD84A23ECC02200B6C220 /* AppDelegate.swift */; };
 		77CAD84D23ECC02200B6C220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD84C23ECC02200B6C220 /* SceneDelegate.swift */; };
-		77CAD84F23ECC02200B6C220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD84E23ECC02200B6C220 /* ViewController.swift */; };
 		77CAD85223ECC02200B6C220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CAD85023ECC02200B6C220 /* Main.storyboard */; };
 		77CAD85423ECC02300B6C220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77CAD85323ECC02300B6C220 /* Assets.xcassets */; };
 		77CAD85723ECC02300B6C220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CAD85523ECC02300B6C220 /* LaunchScreen.storyboard */; };
+		77CAD85F23ECC54A00B6C220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD85E23ECC54A00B6C220 /* ViewController.swift */; };
+		77CAD88123ECEE2A00B6C220 /* ToDoDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD88023ECEE2A00B6C220 /* ToDoDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77CAD84723ECC02200B6C220 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CAD84A23ECC02200B6C220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CAD84C23ECC02200B6C220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77CAD84E23ECC02200B6C220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77CAD85123ECC02200B6C220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77CAD85323ECC02300B6C220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77CAD85623ECC02300B6C220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77CAD85823ECC02300B6C220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77CAD85E23ECC54A00B6C220 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77CAD88023ECEE2A00B6C220 /* ToDoDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				77CAD84A23ECC02200B6C220 /* AppDelegate.swift */,
 				77CAD84C23ECC02200B6C220 /* SceneDelegate.swift */,
-				77CAD84E23ECC02200B6C220 /* ViewController.swift */,
+				77CAD85E23ECC54A00B6C220 /* ViewController.swift */,
+				77CAD88023ECEE2A00B6C220 /* ToDoDetailTableViewController.swift */,
 				77CAD85023ECC02200B6C220 /* Main.storyboard */,
 				77CAD85323ECC02300B6C220 /* Assets.xcassets */,
 				77CAD85523ECC02300B6C220 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77CAD84F23ECC02200B6C220 /* ViewController.swift in Sources */,
+				77CAD85F23ECC54A00B6C220 /* ViewController.swift in Sources */,
 				77CAD84B23ECC02200B6C220 /* AppDelegate.swift in Sources */,
+				77CAD88123ECEE2A00B6C220 /* ToDoDetailTableViewController.swift in Sources */,
 				77CAD84D23ECC02200B6C220 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
