@@ -6,10 +6,10 @@
 //  Copyright © 2020 张泽华. All rights reserved.
 //
 
-import Foundation
-struct ToDoItem{
+import UIKit
+struct ToDoItem: Codable{
     var name: String
     var date: Date
     var notes: String
-    
+    var reminderSet : Bool
 }
