@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		779045B92413370B00AF288F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779045B82413370B00AF288F /* ListTableViewCell.swift */; };
+		779045BB24142CD900AF288F /* TodoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779045BA24142CD900AF288F /* TodoItems.swift */; };
+		779045BD241460A900AF288F /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779045BC241460A900AF288F /* LocalNotificationManager.swift */; };
+		779045BF2414C89F00AF288F /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779045BE2414C89F00AF288F /* UIViewController+alert.swift */; };
 		77CAD84B23ECC02200B6C220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD84A23ECC02200B6C220 /* AppDelegate.swift */; };
 		77CAD84D23ECC02200B6C220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAD84C23ECC02200B6C220 /* SceneDelegate.swift */; };
 		77CAD85223ECC02200B6C220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CAD85023ECC02200B6C220 /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		779045B82413370B00AF288F /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		779045BA24142CD900AF288F /* TodoItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItems.swift; sourceTree = "<group>"; };
+		779045BC241460A900AF288F /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationManager.swift; path = ../../../../../../../Applications/LocalNotificationManager.swift; sourceTree = "<group>"; };
+		779045BE2414C89F00AF288F /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		77CAD84723ECC02200B6C220 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CAD84A23ECC02200B6C220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CAD84C23ECC02200B6C220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +70,14 @@
 			children = (
 				77CAD84A23ECC02200B6C220 /* AppDelegate.swift */,
 				77CAD84C23ECC02200B6C220 /* SceneDelegate.swift */,
+				779045BC241460A900AF288F /* LocalNotificationManager.swift */,
+				779045BE2414C89F00AF288F /* UIViewController+alert.swift */,
 				77D696C223EF645700758B28 /* ToDoItem.swift */,
 				77CAD85E23ECC54A00B6C220 /* ViewController.swift */,
 				77CAD88023ECEE2A00B6C220 /* ToDoDetailTableViewController.swift */,
+				779045BA24142CD900AF288F /* TodoItems.swift */,
 				77CAD85023ECC02200B6C220 /* Main.storyboard */,
+				779045B82413370B00AF288F /* ListTableViewCell.swift */,
 				77CAD85323ECC02300B6C220 /* Assets.xcassets */,
 				77CAD85523ECC02300B6C220 /* LaunchScreen.storyboard */,
 				77CAD85823ECC02300B6C220 /* Info.plist */,
@@ -147,8 +159,12 @@
 				77CAD85F23ECC54A00B6C220 /* ViewController.swift in Sources */,
 				77CAD84B23ECC02200B6C220 /* AppDelegate.swift in Sources */,
 				77D696C323EF645700758B28 /* ToDoItem.swift in Sources */,
+				779045BF2414C89F00AF288F /* UIViewController+alert.swift in Sources */,
 				77CAD88123ECEE2A00B6C220 /* ToDoDetailTableViewController.swift in Sources */,
 				77CAD84D23ECC02200B6C220 /* SceneDelegate.swift in Sources */,
+				779045B92413370B00AF288F /* ListTableViewCell.swift in Sources */,
+				779045BD241460A900AF288F /* LocalNotificationManager.swift in Sources */,
+				779045BB24142CD900AF288F /* TodoItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

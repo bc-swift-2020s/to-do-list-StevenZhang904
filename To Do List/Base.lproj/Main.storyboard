@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--To Do List View Controller-->
+        <!--To Do List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ToDoListViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +19,34 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="2cZ-El-9an">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="2cZ-El-9an" customClass="ListTableViewCell" customModule="To_Do_List" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2cZ-El-9an" id="KN9-LM-HAp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vB-pF-bp2">
+                                                    <rect key="frame" x="74" y="11" width="320" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-Va-Guu">
+                                                    <rect key="frame" x="20" y="11" width="29" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title=" " image="rectangle" catalog="system"/>
+                                                    <state key="selected" image="checkmark.rectangle" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="checkToggled:" destination="2cZ-El-9an" eventType="touchUpInside" id="7VH-mz-GGt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkBoxButton" destination="c0E-Va-Guu" id="nkh-pH-ztf"/>
+                                            <outlet property="nameLabel" destination="7vB-pF-bp2" id="Siu-6Q-db1"/>
                                             <segue destination="yaC-jK-VRz" kind="show" identifier="ShowDetail" id="WKX-Cq-Ath"/>
                                         </connections>
                                     </tableViewCell>
@@ -42,7 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SVt-G0-hCU">
+                    <navigationItem key="navigationItem" title="To Do List" largeTitleDisplayMode="always" id="SVt-G0-hCU">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="7iN-Tp-ryd">
                             <connections>
                                 <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="HQL-rh-3fW"/>
@@ -50,7 +70,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gri-EK-zLD">
                             <connections>
-                                <segue destination="8yl-IJ-DBq" kind="presentation" id="6dg-MX-CbH"/>
+                                <segue destination="8yl-IJ-DBq" kind="presentation" identifier="AddDetail" id="6dg-MX-CbH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,11 +101,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alD-ZJ-F9S">
-                                                    <rect key="frame" x="17" y="5" width="374" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is will be a To Do Item. " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alD-ZJ-F9S">
+                                                    <rect key="frame" x="20" y="2" width="373" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldEditingChanged:" destination="yaC-jK-VRz" eventType="editingChanged" id="4z0-dA-xSp"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -147,7 +170,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wFC-rz-5Gr">
-                                                    <rect key="frame" x="20" y="11" width="374" height="291"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -166,7 +189,7 @@
                             <outlet property="delegate" destination="yaC-jK-VRz" id="5S7-Xt-b5r"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="c1K-mN-lRf">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="c1K-mN-lRf">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m6t-UN-HhC">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="yaC-jK-VRz" id="thP-av-5cf"/>
@@ -182,7 +205,7 @@
                         <outlet property="dateLabel" destination="wZo-aO-AXj" id="Bk4-zX-kS8"/>
                         <outlet property="datePicker" destination="oMh-R3-YFU" id="adJ-9p-gts"/>
                         <outlet property="nameField" destination="alD-ZJ-F9S" id="5bl-lg-AwM"/>
-                        <outlet property="noteView" destination="Bse-z9-VuA" id="GrL-2c-ITZ"/>
+                        <outlet property="noteView" destination="wFC-rz-5Gr" id="c4y-qK-wGF"/>
                         <outlet property="reminderSwitch" destination="Etw-w6-o7g" id="iH8-YB-mbg"/>
                         <outlet property="saveBarButton" destination="kPv-GX-mCb" id="4Kj-WL-MhK"/>
                     </connections>
@@ -231,6 +254,10 @@
             <point key="canvasLocation" x="1957.9710144927537" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.rectangle" catalog="system" width="64" height="46"/>
+        <image name="rectangle" catalog="system" width="64" height="46"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WKX-Cq-Ath"/>
     </inferredMetricsTieBreakers>
